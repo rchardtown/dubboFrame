@@ -1,0 +1,21 @@
+server:
+  port: 8899
+spring:
+  application:
+    name: ums-controller
+  thymeleaf:
+    # 视图
+    cache: false
+    encoding: UTF-8
+    prefix: classpath:/view/
+    suffix: .html
+dubbo:
+  application:
+    name: ums-controller
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    address: zookeeper://localhost:2181
+  scan:
+    base-packages: cn.ekgc.dubbo

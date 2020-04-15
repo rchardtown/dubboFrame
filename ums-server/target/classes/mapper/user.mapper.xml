@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ekgc.dubbo.dao.UserDao">
+	<select id="findUserByQueryForPage" parameterType="java.util.Map" resultMap="userMap">
+		select
+			user_id,
+			username,
+			gender,
+			cellphone,
+			password,
+			email,
+			birthday,
+			create_time,
+			update_time
+		from
+			sys_user
+		limit #{begin}, #{size}
+	</select>
+
+	<resultMap id="userMap" type="User">
+		<id property="userId" javaType="java.lang.Long" column="user_id"/>
+		<result property="username" javaType="java.lang.String" column="username"/>
+		<result property="cellphone" javaType="java.lang.String" column="cellphone"/>
+		<result property="password" javaType="java.lang.String" column="password"/>
+		<result property="email" javaType="java.lang.String" column="email"/>
+		<result property="gender" javaType="java.lang.String" column="gender"/>
+		<result property="birthday" javaType="java.util.Date" column="birthday"/>
+		<result property="createTime" javaType="java.util.Date" column="create_time"/>
+		<result property="updateTime" javaType="java.util.Date" column="update_time"/>
+	</resultMap>
+</mapper>
