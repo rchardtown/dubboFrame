@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ums-commons" />
+        <module name="ums-controller" />
+        <module name="ums-interface" />
+        <module name="ums-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ums-commons" target="1.8" />
+      <module name="ums-controller" target="1.8" />
+      <module name="ums-interface" target="1.8" />
+      <module name="ums-parent" target="1.8" />
+      <module name="ums-server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ums-commons" options="-parameters" />
+      <module name="ums-controller" options="-parameters" />
+      <module name="ums-interface" options="-parameters" />
+      <module name="ums-server" options="-parameters" />
+    </option>
+  </component>
+</project>
