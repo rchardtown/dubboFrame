@@ -28,7 +28,7 @@
 	<!--step1:使用springboot parent 作为父级依赖[end]-->
 
 	<properties>
-		<dubbo.version>2.7.4.1</dubbo.version>
+		<dubbo.version>2.7.13</dubbo.version>
 		<zookeeper.version>0.11</zookeeper.version>
 	</properties>
 
